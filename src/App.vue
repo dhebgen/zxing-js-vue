@@ -8,7 +8,6 @@
     @result="onScan"
   /> -->
   <qr-scanner-zxing />
-  <p>Hello World!</p>
 </template>
 
 <script lang="ts">
