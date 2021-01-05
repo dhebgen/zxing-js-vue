@@ -14,15 +14,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 // import HelloWorld from './components/HelloWorld.vue';
-import qrCodeScanner from '@/components/QrScanner.vue';
-import qrCodeScannerZxing from '@/components/QrScannerZxing.vue';
+// import qrCodeScanner from '@/components/QrScanner.vue';
 import QrScannerZxing from '@/components/QrScannerZxing.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
     // HelloWorld,
-    qrCodeScanner,
+    // qrCodeScanner,
     QrScannerZxing
   },
   methods: {
