@@ -49,7 +49,7 @@ export default defineComponent({
           }
 
           if (err) {
-            // this.setCode('');
+            this.setCode('');
 
             // As long as this error belongs into one of the following categories
             // the code reader is going to continue as excepted. Any other error
