@@ -32,6 +32,7 @@ export default defineComponent({
   },
   methods: {
     decodeContinuously() {
+      codeReader.listVideoInputDevices();
       codeReader.decodeFromInputVideoDeviceContinuously(
         'undefined',
         'video',
