@@ -40,7 +40,10 @@ export default defineComponent({
           if (result) {
             // properly decoded qr code
             console.log('Found QR code!', result);
-            this.setCode(result.getText());
+            const text = result.getText();
+            if (text !== '') {
+              this.setCode(text);
+            }
           }
 
           if (err) {
