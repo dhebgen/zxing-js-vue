@@ -1,12 +1,13 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" /> -->
-  <qr-code-scanner
+  <!-- <qr-code-scanner
     :qrbox="250"
     :fps="10"
     style="width: 500px"
     @result="onScan"
-  />
+  /> -->
+  <qr-scanner-zxing />
   <p>Hello World!</p>
 </template>
 
@@ -14,12 +15,15 @@
 import { defineComponent } from 'vue';
 // import HelloWorld from './components/HelloWorld.vue';
 import qrCodeScanner from '@/components/QrScanner.vue';
+import qrCodeScannerZxing from '@/components/QrScannerZxing.vue';
+import QrScannerZxing from '@/components/QrScannerZxing.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
     // HelloWorld,
-    qrCodeScanner
+    qrCodeScanner,
+    QrScannerZxing
   },
   methods: {
     onScan(qrCodeMessage: string) {
