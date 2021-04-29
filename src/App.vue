@@ -7,21 +7,24 @@
     style="width: 500px"
     @result="onScan"
   /> -->
-  <qr-scanner-zxing />
+  <!-- <qr-scanner-zxing /> -->
+  <multi-format-code-scanner-zxing />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 // import HelloWorld from './components/HelloWorld.vue';
 // import qrCodeScanner from '@/components/QrScanner.vue';
-import QrScannerZxing from '@/components/QrScannerZxing.vue';
+// import QrScannerZxing from '@/components/QrScannerZxing.vue';
+import multiFormatCodeScannerZxing from '@/components/MultiFormatReader.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
     // HelloWorld,
     // qrCodeScanner,
-    QrScannerZxing
+    // QrScannerZxing,
+    multiFormatCodeScannerZxing
   },
   methods: {
     onScan(qrCodeMessage: string) {
