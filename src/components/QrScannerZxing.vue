@@ -15,16 +15,18 @@ import {
   BrowserQRCodeReader,
   NotFoundException,
   ChecksumException,
-  FormatException
+  FormatException,
+  MultiFormatReader,
 } from '@zxing/library';
 
-const codeReader = new BrowserQRCodeReader();
+// const codeReader = new BrowserQRCodeReader();
+const codeReader = new MultiFormatReader();
 
 export default defineComponent({
   name: 'qrCodeScannerZxing',
   data() {
     return {
-      result: ''
+      result: '',
     };
   },
   mounted() {
@@ -78,8 +80,8 @@ export default defineComponent({
     },
     setCode(code: string) {
       this.result = code;
-    }
-  }
+    },
+  },
 });
 </script>
 <style lang="ts"></style>
