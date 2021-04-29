@@ -11,10 +11,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import {
-  BrowserMultiFormatOneDReader,
-  BrowserQRCodeReader
-} from '@zxing/browser';
+import { BrowserMultiFormatReader } from '@zxing/browser';
 
 // const codeReader = new BrowserQRCodeReader();
 
@@ -35,12 +32,12 @@ export default defineComponent({
         '#test-area-qr-code-webcam > video'
       );
 
-      const videoInputDevices = await BrowserMultiFormatOneDReader.listVideoInputDevices();
+      const videoInputDevices = await BrowserMultiFormatReader.listVideoInputDevices();
 
       // choose your media device (webcam, frontal camera, back camera, etc.)
       const selectedDeviceId = videoInputDevices[0].deviceId;
 
-      const codeReader = new BrowserMultiFormatOneDReader();
+      const codeReader = new BrowserMultiFormatReader();
       // const codeReader = new BrowserQRCodeReader();
 
       // you can use the controls to stop() the scan or switchTorch() if available
